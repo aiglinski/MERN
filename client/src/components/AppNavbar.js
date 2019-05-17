@@ -41,7 +41,7 @@ class AppNavbar extends Component {
                   <NavLink href="http://google.com">Google</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="http://google.com">Google</NavLink>
+                  <NavLink href="http://google.com">Facebook</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
