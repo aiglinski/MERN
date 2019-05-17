@@ -1,4 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
+import AppNavbar from "./components/AppNavbar";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <div className="App">
-      <h1>Hi there fella</h1>
+      <AppNavbar />
     </div>
   );
 }
