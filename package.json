@@ -17,7 +17,8 @@
     "express": "^4.16.4",
     "mongoose": "^5.5.8",
     "react-strap": "0.0.1",
-    "reactstrap": "^8.0.0"
+    "reactstrap": "^8.0.0",
+    "redux-devtools": "^3.5.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"
