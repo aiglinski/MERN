@@ -12,12 +12,19 @@ import { Provider } from "react-redux";
 
 import store from "./components/store";
 
+import ItemModal from "./components/itemModal";
+
+import { Container } from "reactstrap";
+
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
         <AppNavbar />
-        <ShoppingList />
+        <Container>
+          <ItemModal />
+          <ShoppingList />
+        </Container>
       </div>
     </Provider>
   );
