@@ -36,19 +36,20 @@ class ItemModal extends Component {
     };
 
     this.props.addItems(newItem);
+
     this.toggle();
   };
 
   render() {
     return (
       <div>
-        <button
+        <Button
           color="dark"
           style={{ marginBottom: "2rem" }}
           onClick={this.toggle}
         >
-          Add Item
-        </button>
+          Add Inventory
+        </Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Add to Inventory</ModalHeader>
           <ModalBody>
@@ -74,4 +75,11 @@ class ItemModal extends Component {
   }
 }
 
-export default connect()(ItemModal);
+const mapStateToProps = state => ({
+  item: state.item,
+});
+
+export default connect(
+  mapStateToProps,
+  { addItems }
+)(ItemModal);

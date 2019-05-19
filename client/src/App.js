@@ -4,8 +4,6 @@ import AppNavbar from "./components/AppNavbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import ShoppingList from "./components/ShoppingList";
 
 import { Provider } from "react-redux";
