@@ -1,9 +1,13 @@
 import { GET_ITEMS, ADD_ITEMS, DELETE_ITEMS, ITEMS_LOADING } from "./types";
-
-export const getItems = () => {
-  return {
-    type: GET_ITEMS,
-  };
+import axios from "axios";
+export const getItems = () => dispatch => {
+  dispatch(setItemsLoading());
+  axios.get("api/items").then(res =>
+    dispatch({
+      type: GET_ITEMS,
+      payload: res.data,
+    })
+  );
 };
 
 export const deleteItems = id => {
@@ -16,12 +20,12 @@ export const deleteItems = id => {
 export const addItems = item => {
   return {
     type: ADD_ITEMS,
-    payload: item
+    payload: item,
   };
+};
 
-  export const setItemsLoading () => {
-      return {
-          type: ITEMS_LOADING,
-      }
-  }
+export const setItemsLoading = () => {
+  return {
+    type: ITEMS_LOADING,
+  };
 };
